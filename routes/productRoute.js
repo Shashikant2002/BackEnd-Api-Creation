@@ -12,12 +12,6 @@ const {
 const { isAuthenticatedUser, authorizeRoles } = require("../middleware/auth");
 const router = express.Router();
 
-router.route("/").post(() => {
-  res.status(200).json({
-    success: "This is Success"
-  });
-});
-
 // Product Routes
 router.route("/products").get(getAllProducts);
 
