@@ -6,6 +6,7 @@ const cookie = require('cookie-parser');
 app.use(express.json());
 app.use(cookie());
 
+
 // Route Imports
 const product = require("./routes/productRoute");
 const user = require("./routes/userRoute");
