@@ -14,16 +14,14 @@ process.on('uncaughtException', (err) => {
 
 
 // config
-dotenv.config({ path: 'BackEnd/config/config.env' });
+dotenv.config({ path: 'config/config.env' });
 
 // Connecting To Data Base 
 connectDatabase();
 
-
 const server = app.listen(process.env.PORT, () => {
     console.log(`Port Listening on http://localhost:${process.env.PORT}`);
 });
-
 
 // unHandeled promise Rejections
 process.on("unhandledRejection", err => {
