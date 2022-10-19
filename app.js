@@ -13,11 +13,11 @@ const product = require("./routes/productRoute");
 const user = require("./routes/userRoute");
 const order = require("./routes/orderRoute");
 
-router.route("/").post(() => {
-    res.status(200).send({
-      success: "This is Success",
-    });
-  });
+app.use('/', (req, res) => {
+    res.json({
+        message: "Suggest"
+    })
+})
 
 app.use("/api/v1", product);
 app.use("/api/v1", user);
